@@ -58,7 +58,7 @@ class PokemonScrapper(scrapy.Spider):
         types = response.meta['types']
         ability_url = response.meta['ability_url']
 
-        # Extraindo a descrição da habilidade
+        # Extraindo a descrição da habilidade.
         description = response.css('.grid-row > .grid-col > p::text').get()
 
         # Salvar os dados em uma lista
